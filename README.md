@@ -19,3 +19,16 @@ It's a Unity technology for compiling .NET assemblies to native platform. It has
 ***Nested Prefabs***   
 A prefab is a template for a collection of game objects and components, a prefab can be instantiated into a scene. Nested prefabs allows to include prefab instances as children inside other prefabs, while still maintaining a reference to their own prefab asset, so making a change to the parent prefab taht change will be reflected in all children
 
+### 2.2 Problems of Unity’s non-incremental Garbage Collector.   
+1. Whenever the garbage collector needs to perform garbage collection, it will stop the running program, and resume only when it has finished all its work, causing delays at arbitrary moments. This can become an issue as ii is not possible to sustain a consistent frame rate.
+2. The programmer has little control when the garbage collection should be launched.
+
+### 2.3 Unity LTS vs TECH release vs Beta vs Alpha
+***Alpha:*** In this phase the software is not thoroughly tested and main contain several bugs and errors.   
+***Betha:*** The software is feature completed but may contain known and unknown bugs.   
+***TECH release:*** Consist of three major releases a year with new features and funcionality.
+***LTS:*** Is the last TECH release of each year   
+
+Depending on where you are in your development cycle, you may want either to try out new features (TECH release) or only to get bug fixes in the version you are using for a longer period without adding new features (LTS).
+
+### 2.4 Preferred VCS

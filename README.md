@@ -1,5 +1,15 @@
 # Unity-Assessment
 
+## 1. Problems
+
+### 1.2 C++ Plugin
+
+The `CppPlugin` folder contains the visual studio solution for windows with the C++ native code and the `CppPlugin.dll` file on `x64/Release` folder.
+There is a copy of the `CppPlugin.dll` file on `Unity Assessment/Assets` folder on Unity project.
+The scene `1.2 C Plugin` adds the script `CppPlugin.cs` to the main camera, and logs the concatenated string
+
+[](CppPlugin.gif)
+
 ## 2. Questions
 
 ### 2.1 Definitions:

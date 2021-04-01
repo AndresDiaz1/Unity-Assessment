@@ -32,3 +32,45 @@ A prefab is a template for a collection of game objects and components, a prefab
 Depending on where you are in your development cycle, you may want either to try out new features (TECH release) or only to get bug fixes in the version you are using for a longer period without adding new features (LTS).
 
 ### 2.4 Preferred VCS
+My preferred version control system is ***GIT** because it is a distributed revision control system, it's faster than other VCS and each instance of the source contains the entire history tree  which is helpful when there is no internet connection.    
+
+### 2.5 Favorite IDE
+Taking into account my background as a Front End developer my favorite IDE is Jetbrain's Webstorm because it works out of the box and mainly I have used mac OS so Webstorm works great on that OS, if I need to write C# code I use also Jetbrain's Rider IDE.
+
+### 2.6 Unity's issues or limitations
+1. The first thing is documentation, it could be better there are some concepts that lack documentation.
+2. Sometimes the changes saved on the C# script are not updated on Unity
+3. Maybe not a limitation but just how Unity works, once I needed to do a benchmark for a google maps mobile app using Unity and apache Cordova, Unity's build size was way bigger than apache cordova, so the end user would have heavier app. At the end the conclusion was that Unity is not the best choice for small and medium mobile apps (at least back at that time 2014)
+
+### 2.7 Best practices to ptimize CPU and GPU
+***CPU:***   
+1. Cache references at initialization because calling some methods such as `GetComponent()` are expensive.
+2.  `LINQ` generally requires more computation and memory than a manually written algorithm.
+3.  Empty callback functions Unity operates back and forth between an unmanaged and managed code, so empty functions as `Update(){}`
+4.  Avoid passing structs by value, when yuo pass a struct to a function their contents are copied into a newly created instance.  
+
+***GPU:***    
+1. Avoid full screen effects because can be expensive.
+2. Optimize fragment shader, because it is executed once per pixel.
+3. Optimize the model geometry in order to reduce the amount of triangles.
+4. Try to use lightmapping to avoid create lighting that requires computation
+
+### 2.8 How to investigate crashes ###
+If you can afford Unity's ***Backtrace*** tool, you can use it, also you can use Unity's profiler.
+Also I try to follow a plan:
+1. Know the customer, so I can tell what devices/OS or browsers they are using.
+2. Once I know how the customer uses the product I can start testing the application creating a smoke test.
+3. If I know that there are new features on the application I can start doing a regression test checking for features released before, so I narrow down the possible issues.
+4. Try to replicate the issue.
+5. Try to replicate the issue on development environment.
+6. Profile the application
+
+### 2.9 Compare function and macro definition ###
+In macros no type checking is done and thus use of macros can lead to errors/side-effects in some cases. One case when they produce different results or side effects could be for example:    
+    `printf("%d", square(1+2));`
+> ***Using macro*** Output: 5     
+> ***Using function*** Output: 9
+
+### 2.10 Package Manager ###
+  
+

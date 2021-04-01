@@ -72,5 +72,10 @@ In macros no type checking is done and thus use of macros can lead to errors/sid
 > ***Using function*** Output: 9
 
 ### 2.10 Package Manager ###
-  
+It's a package management system based on NPM. The packages are loaded into a separate folder structure, not the project assets folder, so they are not tracked by the version management system. Allows the separation of componnet assets from the project assets, as well as the improved ability to do version and dependency management.
+
+If you don't want to use the package manager UI, you can use the Package Manager scriptin API: you can run `Client.Add("com.unity.textmeshpro@1.3.0")` and it will add the TextMesh pro version 1.3.0 package.
+
+### 2.11 Function result ###
+`int someFunction(int)` returns the number of ones (1) that the parameter as binary number contains, example: 255 will return 8 because 255 = 0x1111 1111 which have 8 ones. 100 will return 3 because 100 = 0x0110 0100 which have 3 ones.   
 

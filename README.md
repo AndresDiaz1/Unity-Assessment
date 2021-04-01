@@ -8,7 +8,7 @@ The `CppPlugin` folder contains the visual studio solution for windows with the 
 There is a copy of the `CppPlugin.dll` file on `Unity Assessment/Assets` folder on Unity project.
 The scene `1.2 C Plugin` adds the script `CppPlugin.cs` to the main camera, and logs the concatenated string
 
-[](CppPlugin.gif)
+![](CppPlugin.gif)
 
 ## 2. Questions
 

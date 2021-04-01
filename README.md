@@ -2,6 +2,13 @@
 
 ## 1. Problems
 
+### 1.1 Shader
+
+In order to check the shader you must disable the `Universal Render Pipeline` (TO DO: Add SRP compatibility to the shader adding the material properties to a CBUFFER named "UnityPerMaterial").
+Once finish the test, please enable again the `Universal Render Pipeline` so VFX on bullet 1.4 can work properly
+The scene `1.1 Shaders` includes an object, a material and the extended shader. 
+![](Shader.gif)
+
 ### 1.2 C++ Plugin
 
 The `CppPlugin` folder contains the visual studio solution for windows with the C++ native code and the `CppPlugin.dll` file on `x64/Release` folder.
@@ -12,7 +19,7 @@ The scene `1.2 C Plugin` adds the script `CppPlugin.cs` to the main camera, and 
 
 ### 1.4 VFX Bezier curve
 
-The scene `1.4 VFX Bezier` contains a visual effect asset that create aparticle system that moves along a cubic bezier curve
+Not forget to enable the `Universal Render Pipeline`. The scene `1.4 VFX Bezier` contains a visual effect asset that create aparticle system that moves along a cubic bezier curve
 ![](VFXBezier.gif)
 
 ## 2. Questions

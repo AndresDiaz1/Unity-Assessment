@@ -10,6 +10,11 @@ The scene `1.2 C Plugin` adds the script `CppPlugin.cs` to the main camera, and 
 
 ![](CppPlugin.gif)
 
+### 1.4 VFX Bezier curve
+
+The scene `1.4 VFX Bezier` contains a visual effect asset that create aparticle system that moves along a cubic bezier curve
+![](VFXBezier.gif)
+
 ## 2. Questions
 
 ### 2.1 Definitions:

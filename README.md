@@ -35,6 +35,14 @@ On the gif you can see the workers being used when you enable the `Use Job Syste
     
 ![](JobSystem.gif)
 
+    
+*Explanation:* Job system is one of the pillars of the new Unity Jobs tech stack, actually in Unity 2020+ is necessary to enable the Preview packages option on project settings in order to be able to include the *jobs* package.
+![](PreviewEnabled.PNG)
+![](JobsPreviewPackage.PNG)
+
+The Jobs system handles all of the behind scenes stuff related to multithreading, so the user just needs to create jobs and schedule them.    
+It's important to keep in mind that if the job returns a value you should use `NativeArray` from `Unity.Collections` and pass that object to the Job structure.    
+Also keep in mind to *dispose* all `NativeArray` elements to avoid memory leaks.
 
 ### 1.4 VFX Bezier curve
 

@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 773634834
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: cubea
+      Dependencies: {}

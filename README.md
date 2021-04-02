@@ -46,16 +46,24 @@ Also keep in mind to *dispose* all `NativeArray` elements to avoid memory leaks.
 
 ### 1.4 VFX Bezier curve
 
-Not forget to enable the `Universal Render Pipeline`. The scene `1.4 VFX Bezier` contains a visual effect asset that create aparticle system that moves along a cubic bezier curve
+Do not forget to enable the `Universal Render Pipeline` on project settings:
+
+![](URP.PNG)
+
+The scene `1.4 VFX Bezier` contains a visual effect asset that creates a particle system that moves along a cubic bezier curve
     
 ![](VFXBezier.gif)
 
+*Explanation:* The VFX runs on the GPU unlike the regular particle system that runs on the CPU. The Graph contain contexts and the user can add nodes to the graph.    
+A Bezier curve is defined by a set of control points P0 through Pn, where n is called its order (n = 1 for linear, 2 for quadratic, etc.). The first and last control points are always the end points of the curve; however, the intermediate control points (if any) generally do not lie on the curve.
+
 ### 1.5 Prefab asset bundle
 
-Not forget to enable the `Universal Render Pipeline`. The scene `1.5 Prefabs` loads 2 bundles and instantiates them on the scene.
+Not forget to disable the `Universal Render Pipeline`. The scene `1.5 Prefabs` loads 2 bundles and instantiates them on the scene.
     
 ![](Prefabs.gif)
 
+*Explanation:* It's important that the script in charge of creating the asset bundle must be on the `Assets/Editor` folder.
 
 ## 2. Questions
 

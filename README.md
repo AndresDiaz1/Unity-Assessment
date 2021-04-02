@@ -17,6 +17,12 @@ The scene `1.2 C Plugin` adds the script `CppPlugin.cs` to the main camera, and 
 
 ![](CppPlugin.gif)
 
+### 1.3 Job System
+The scene `1.3 RChannel` includes the script `R Channel`. That script calculates the sum of the red values in a texture, both in a single thread and using Unity's Job System.
+On the gif you can see the workers being used when you enable the `Use Job System` toggle.
+![](JobSystem.gif)
+
+
 ### 1.4 VFX Bezier curve
 
 Not forget to enable the `Universal Render Pipeline`. The scene `1.4 VFX Bezier` contains a visual effect asset that create aparticle system that moves along a cubic bezier curve

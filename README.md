@@ -5,18 +5,28 @@
 ### 1.1 Shader
 
 In order to check the shader you must disable the `Universal Render Pipeline` (TO DO: Add SRP compatibility to the shader adding the material properties to a CBUFFER named "UnityPerMaterial").
-Once finish the test, please enable again the `Universal Render Pipeline` so VFX on bullet 1.4 can work properly
+Once finish the test, please enable again the `Universal Render Pipeline` so VFX on bullet 1.4 can work properly.
 The scene `1.1 Shaders` includes an object, a material and the extended shader. 
     
 ![](Shader.gif)
+    
+*Explanation:* Unity provides ***UnityCG.cginc***, a shader file that includes commonly used helper functions. ***ShadeSH9*** is a helper function from ***UnityCG.cginc*** that evaluates ambient and light probe data.    
 
-### 1.2 C++ Plugin
+### 1.2 C++ Plugin (FOR WINDOWS)
 
 The `CppPlugin` folder contains the visual studio solution for windows with the C++ native code and the `CppPlugin.dll` file on `x64/Release` folder.
-There is a copy of the `CppPlugin.dll` file on `Unity Assessment/Assets` folder on Unity project.
+There is a copy of that `CppPlugin.dll` file on `Unity Assessment/Assets` folder on Unity project.
 The scene `1.2 C Plugin` adds the script `CppPlugin.cs` to the main camera, and logs the concatenated string
     
 ![](CppPlugin.gif)
+
+*Explanation:* In order to create the plugin is important to define the application type as: *"DLL application"* and not use precompiled headers:
+![](noprecompiledheaders.PNG)
+
+On the header file is defined the struct for `TwoStrings` and the function signature, the *.cpp* file just contains the logic to concatenate 2 strings. Then is possible to build the solution in release mode and for 64 bit platforms.    
+The created *.dll* file should be copied to Unity's Assets folder, after that you can import the function using the `DllImport` attribute and call the plugin function.
+
+
 
 ### 1.3 Job System
 

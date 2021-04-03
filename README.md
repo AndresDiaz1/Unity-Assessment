@@ -1,5 +1,7 @@
 # Unity-Assessment
 
+This assessment was solved using Unity 2020.3.2f1
+
 ## 1. Problems
 
 ### 1.1 Shader
